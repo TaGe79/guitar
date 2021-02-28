@@ -18,8 +18,15 @@ open class MinorScale(key: Note) : Scale(
     )
 )
 
-class CMinor() : MinorScale(Note.C)
-class DMinor() : MinorScale(Note.D)
-class EMinor() : MinorScale(Note.E)
-
 class NaturalMinor() : MinorScale(Note.A)
+
+class MinorPentatonic(key: Note) : Scale(
+    key,
+    listOf(
+        Step.WHOLE_AND_A_HALF,
+        Step.WHOLE,
+        Step.WHOLE,
+        Step.WHOLE_AND_A_HALF,
+        Step.WHOLE
+    )
+)
